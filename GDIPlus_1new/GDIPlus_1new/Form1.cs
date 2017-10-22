@@ -19,6 +19,12 @@ namespace GDIPlus_1new
 
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
+            Graphics g = e.Graphics;
+            Image image = Image.FromFile("G:\\Paweena185.png");
+            TextureBrush brush = new TextureBrush(image);
+            Rectangle rect = new Rectangle(10, 10,380, 350);
+            g.FillEllipse(brush, rect);
+            g.Dispose();
 
         }
     }
